@@ -1,0 +1,24 @@
+CV STUDIO — PETUNJUK PENGGUNAAN
+
+FILE DALAM PAKET
+- CV-Resume-Studio.html : aplikasi web statis yang dibuka di browser.
+- CV-Master-Untuk-Import.docx : salinan CV Master dalam format Word modern (.docx) untuk diimpor ke aplikasi.
+
+CARA PAKAI
+1. Ekstrak ZIP ke sebuah folder.
+2. Buka CV-Resume-Studio.html dengan Google Chrome atau Microsoft Edge. Koneksi internet diperlukan untuk memuat library JavaScript dari CDN.
+3. Klik “Pilih CV Master (.docx)” dan pilih CV-Master-Untuk-Import.docx.
+4. Cek hasil pembacaan dan koreksi judul atau isi yang kurang tepat.
+5. Klik “Buat Resume Target”, lalu masukkan posisi, perusahaan (opsional), dan deskripsi lowongan.
+6. Sesuaikan ringkasan, pilih item pengalaman/proyek/organisasi yang relevan, kelola bullet, skill, sertifikasi, dan section. Data CV Master dan Resume Target terpisah.
+7. Klik “Simpan” untuk menandai dokumen dalam sesi aktif, lalu gunakan tombol “Word Master”, “PDF Master”, “Word Resume”, atau “PDF Resume”. Saat ekspor PDF, pilih “Save as PDF” pada dialog cetak browser.
+8. Sebelum menutup tab, ekspor dokumen yang ingin disimpan. Perubahan tidak disimpan permanen.
+9. Klik “Hapus Sesi” di pojok kanan atas untuk membersihkan dokumen dan isi editor dari sesi halaman.
+
+PRIVASI DAN BATASAN
+- Tidak memakai database, localStorage, atau penyimpanan otomatis.
+- Dokumen CV diproses di browser; isi CV tidak dikirim ke server oleh aplikasi. Browser tetap meminta library JavaScript dari CDN saat halaman dimuat.
+- Refresh, menutup tab, atau menghapus sesi akan menghilangkan perubahan yang belum diekspor.
+- Analisis kecocokan lowongan menggunakan pencocokan kata kunci sederhana di browser, bukan AI dan bukan jaminan skor ATS.
+- Nama, lokasi, telepon, email, LinkedIn, dan portfolio dikunci di editor kecuali di activate; headline/posisi yang ditampilkan di bawah nama dapat diedit.
+- File .doc lama tidak dapat diimpor langsung di versi ini. Gunakan salinan .docx yang disertakan atau konversi file .doc menjadi .docx terlebih dahulu.

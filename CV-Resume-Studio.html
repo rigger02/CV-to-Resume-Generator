@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CV Studio — Resume Tailor</title>
+<style>
+:root{--bg:#f4f6fa;--panel:#fff;--ink:#182235;--muted:#6d788d;--line:#e2e7f0;--brand:#3457d5;--brand2:#eef2ff;--danger:#b42318;--shadow:0 12px 34px rgba(29,45,82,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 "Segoe UI",Arial,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.topbar{background:#101a32;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 24px;position:sticky;top:0;z-index:10;gap:12px}.brand{font-weight:800;font-size:17px}.brand small{display:block;color:#a8b4d0;font-size:11px;font-weight:400}.top-actions,.toolbar-btns{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.privacy{font-size:11px;color:#c7d2fe}.btn{padding:9px 12px;border-radius:9px;font-size:12px;font-weight:700}.btn-primary{background:var(--brand);color:white}.btn-light{background:white;border:1px solid var(--line);color:#273651}.btn-muted{background:#e9eef8;color:#34425c}.btn-quiet{background:transparent;color:white;border:1px solid #ffffff35}.btn-danger{background:#fff0ef;color:#a52820;border:1px solid #ffceca}.btn-sm{padding:6px 9px;font-size:11px}.main{max-width:1600px;margin:auto;padding:24px}.hero{max-width:970px;margin:40px auto;background:white;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:35px}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.eyebrow{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--brand)}h1{font-size:34px;line-height:1.15;margin:12px 0}.muted,p{color:var(--muted)}.dropzone{border:2px dashed #bdc8df;background:#f8faff;border-radius:16px;text-align:center;padding:25px}.dropzone.drag{background:#eef2ff}.file-input{display:none}.feature-list{display:grid;gap:10px;margin-top:22px;font-size:12px}.app-shell{display:grid;grid-template-columns:220px minmax(350px,1fr) minmax(300px,400px);gap:15px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:15px;box-shadow:0 5px 18px #1c305609}.sidebar{position:sticky;top:80px;padding:14px;max-height:calc(100vh - 95px);overflow:auto}.side-kicker{font-size:10px;font-weight:800;letter-spacing:1px;color:#8b97ab;margin:8px}.doc-tabs,.section-nav{display:grid;gap:5px}.doc-tab,.section-link{padding:9px;border-radius:8px;text-align:left;background:transparent;color:#56647d;font-size:12px}.doc-tab.active{background:var(--brand2);color:#2947bc}.section-link:hover{background:#f3f5fa}.sidebar-divider{border:0;border-top:1px solid var(--line);margin:15px 0}.sidebar-note{font-size:10px;color:#758097;background:#f7f8fc;border-radius:9px;padding:10px;margin-top:14px}.editor-col{min-width:0}.editor-toolbar{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:13px}.editor-toolbar h2{font-size:21px;margin:0}.subtext,.status{font-size:11px;color:var(--muted)}.profile-card,.section-card{padding:16px;margin-bottom:12px}.card-head,.section-card-header{display:flex;justify-content:space-between;align-items:center;gap:9px;margin-bottom:12px}.card-head h3{font-size:13px;margin:0}.locked-label,.type-pill{font-size:10px;background:#f0f3f8;color:#69768c;border-radius:6px;padding:5px 7px}.profile-lock-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.pv-contact a{color:#3158b8;text-decoration:underline;overflow-wrap:anywhere}.pv-contact a:hover{color:#1d3d94}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.field{display:grid;gap:5px;min-width:0}.field.full{grid-column:1/-1}.field label,.mini-label{font-size:10px;font-weight:800;color:#68758d}.input,.textarea,.select{width:100%;border:1px solid #dfe5ef;border-radius:8px;padding:9px 10px;font-size:12px;color:#24334b;background:white;min-width:0}.input[readonly]{background:#f6f8fb;color:#6f7b91}.textarea{min-height:85px;resize:vertical;line-height:1.5}.job-box{background:#f7f8ff;border:1px solid #dfe5ff;border-radius:12px;padding:13px;margin-bottom:12px}.job-box .job-title{font-weight:800;font-size:12px;margin-bottom:10px}.match-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px;font-size:11px;color:#68758d}.section-card{scroll-margin-top:80px}.section-title-input{font-weight:800;font-size:14px;border:0;border-bottom:1px solid transparent;padding:5px 2px;flex:1;min-width:0;background:transparent;color:var(--ink)}.section-title-input:focus{outline:0;border-bottom-color:#9aaafa}.section-actions,.entry-tools{display:flex;gap:4px}.icon-btn{height:27px;width:27px;border-radius:7px;background:#f0f3f9;color:#78849b;font-size:13px}.icon-btn:hover{background:#ffedeb;color:#ac3027}.section-content{display:grid;gap:10px}.entry-card,.skill-group{padding:12px;border:1px solid #e3e8f1;border-radius:11px;background:#fcfdff}.entry-card.relevant{border-color:#a8dfca;background:#fbfffd}.entry-top{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start}.entry-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:0}.entry-inputs .input{padding:8px;font-size:11px}.mini-label{display:block;margin-bottom:4px}.bullet-list{display:grid;gap:7px;margin-top:10px}.bullet-row{display:grid;grid-template-columns:12px 1fr 27px;gap:6px;align-items:start}.bullet-dot{padding-top:7px;color:#98a5bb}.bullet-row textarea{min-height:50px;font-size:11px;padding:8px}.item-footer{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.cert-row{display:grid;grid-template-columns:15px 1fr 27px;gap:7px;align-items:center}.tag-list{display:flex;gap:6px;flex-wrap:wrap}.tag{display:flex;gap:6px;align-items:center;border:1px solid #dfe5f0;background:#f6f8fc;border-radius:7px;padding:5px 7px;font-size:10px}.tag button{background:none;color:#96a1b4}.skill-top,.tag-add{display:flex;gap:7px;margin-bottom:9px}.tag-add{margin-top:9px}.tag-add input{flex:1}.empty-state{padding:18px;text-align:center;border:1px dashed #d8dfec;border-radius:10px;color:#808ba0;font-size:11px}.add-section-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0 20px}.preview-col{position:sticky;top:80px;min-width:0}.preview-top{padding:12px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;font-weight:700}.preview-scroll{padding:13px;max-height:calc(100vh - 140px);overflow:auto}.paper{background:#fff;border:1px solid #e5e7eb;padding:24px 22px;min-height:500px;color:#202b3d;font-family:Arial,sans-serif}.pv-name{font-size:21px;font-weight:800;line-height:1.16;margin:0 0 5px;color:#192744}.pv-headline{font-size:10px;color:#3e5eb8;font-weight:700;margin-bottom:8px}.pv-contact{font-size:8px;line-height:1.7;color:#59667b;border-bottom:1px solid #cfd6e2;padding-bottom:10px;overflow-wrap:anywhere}.pv-section{margin-top:13px}.pv-section h4{font-size:10px;letter-spacing:.7px;color:#2f4d9f;border-bottom:1px solid #d9e0ee;margin:0 0 7px;padding-bottom:3px}.pv-summary{font-size:8px;line-height:1.55;white-space:pre-wrap}.pv-entry{margin:0 0 8px}.pv-entry-title{font-size:9px;font-weight:700;margin:0;line-height:1.4}.pv-entry-sub{font-size:8px;font-style:italic;color:#4f5c71;margin:1px 0 3px}.pv-entry ul{margin:3px 0 0;padding-left:14px}.pv-entry li,.pv-list,.pv-skills{font-size:8px;line-height:1.5;margin:2px 0}.preview-foot,.footer-note{font-size:10px;color:#8490a4;margin:15px 0;text-align:center}.toast{position:fixed;bottom:20px;right:20px;max-width:360px;padding:12px 15px;background:#10213e;color:white;border-radius:12px;box-shadow:var(--shadow);z-index:99;font-size:12px;opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}.modal-backdrop{position:fixed;inset:0;background:#10192f80;display:none;align-items:center;justify-content:center;z-index:50;padding:18px}.modal-backdrop.show{display:flex}.modal{width:min(460px,100%);background:#fff;border-radius:16px;padding:24px;box-shadow:0 25px 75px #10192f55}.modal h3{margin:0 0 7px}.modal p{font-size:12px;color:var(--muted)}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}.hidden{display:none!important}.error-box{padding:10px;background:#fff0ef;color:#9f251c;border-radius:8px;font-size:11px;margin-top:10px;display:none}
+#docxPrintHost{display:none}
+@media(max-width:1200px){.app-shell{grid-template-columns:205px minmax(350px,1fr)}.preview-col{grid-column:2;position:static}.preview-scroll{max-height:none}.paper{max-width:700px;margin:auto}}
+@media(max-width:760px){.main{padding:12px}.hero{padding:20px;margin:18px auto}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:28px}.app-shell{display:flex;flex-direction:column}.sidebar,.editor-col,.preview-col{position:static;width:100%;max-height:none}.field-grid,.entry-inputs{grid-template-columns:1fr}.field.full{grid-column:auto}.editor-toolbar{flex-direction:column}.preview-col{order:3}}
+@media print{body{background:#fff!important;margin:0!important;padding:0!important}body>*:not(#docxPrintHost){display:none!important}#docxPrintHost{display:block!important;position:static!important;width:auto!important;height:auto!important;overflow:visible!important}#docxPrintHost .docx-wrapper{background:#fff!important;padding:0!important;margin:0!important;display:block!important}#docxPrintHost .docx-wrapper>section.docx{box-shadow:none!important;border:0!important;margin:0 auto!important}#docxPrintHost section.docx{break-after:page}#docxPrintHost .docx-wrapper>section.docx:last-of-type{break-after:auto}@page{margin:0}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">CV STUDIO <small>Resume tailoring workspace</small></div>
+  <div class="top-actions"><span class="privacy">◉ Sesi lokal · tanpa database</span><button id="btnReset" class="btn btn-quiet">✕ Hapus Sesi</button></div>
+</header>
+<main class="main">
+<section id="welcome" class="hero">
+  <div class="hero-grid">
+    <div><div class="eyebrow">RESUME TAILORING WORKSPACE</div><h1>Satu CV master.<br>Banyak resume yang relevan.</h1><p>Impor CV Master, buat salinan untuk tiap lowongan, lalu kurasi pengalaman, proyek, skill, sertifikasi, dan section yang paling relevan.</p>
+      <div class="feature-list">
+        <div>↔ <b>Master & resume target terpisah</b><br>Perubahan resume target tidak mengubah master.</div>
+        <div>✎ <b>CRUD lengkap</b><br>Tambah, edit, hapus, dan atur urutan konten.</div>
+        <div>⌁ <b>Privasi lokal</b><br>Tidak ada database dan tidak ada penyimpanan otomatis.</div>
+      </div>
+    </div>
+    <div class="dropzone" id="dropzone"><div style="font-size:30px">↑</div><h3>Mulai dengan CV Master</h3><p>Pilih dokumen Word untuk mengisi workspace secara otomatis.</p><input type="file" class="file-input" id="fileInput" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"><button class="btn btn-primary" id="chooseFile">Pilih CV Master (.docx)</button><div class="error-box" id="uploadError"></div><p style="font-size:10px">Gunakan file .docx. File .doc lama harus dikonversi terlebih dahulu. File tidak dikirim ke server.</p></div>
+  </div>
+</section>
+<section id="workspace" class="app-shell hidden">
+  <aside class="panel sidebar">
+    <div class="side-kicker">DOKUMEN</div>
+    <div class="doc-tabs">
+      <button id="tabMaster" class="doc-tab active">M　CV Master <small id="masterCount"></small></button>
+      <button id="tabTarget" class="doc-tab">↗　Resume Target <small id="targetSub">Belum dibuat</small></button>
+    </div>
+    <hr class="sidebar-divider"><div class="side-kicker">SECTION DALAM DOKUMEN</div>
+    <div class="section-nav" id="sectionNav"></div>
+    <button class="btn btn-light" id="addSectionSide" style="width:100%;margin-top:10px">＋ Tambah Section</button>
+    <div class="sidebar-note">Data hanya bertahan selama tab ini terbuka. Ekspor dokumen sebelum menghapus sesi.</div>
+  </aside>
+  <section class="editor-col">
+    <div class="editor-toolbar"><div><h2 id="docHeading">CV Master</h2><div class="subtext" id="docSubheading">Sumber utama</div></div><div class="toolbar-btns"><button class="btn btn-light" id="btnNewTarget">＋ Buat Resume Target</button><button class="btn btn-muted" id="btnSave">✓ Simpan</button></div></div>
+    <div class="panel profile-card"><div class="card-head"><h3>Identitas & headline</h3><div class="profile-lock-actions"><span id="profileLockState" class="locked-label">Profil sensitif terkunci</span><button id="toggleSensitiveProfile" type="button" class="btn btn-light btn-sm">Edit Profil Sensitif</button></div></div><div id="profileEditor" class="field-grid"></div></div>
+    <div id="targetBox" class="job-box hidden"><div class="job-title">🎯 Target lowongan <span id="matchStatus" class="status"></span></div><div class="field-grid"><div class="field"><label>JUDUL POSISI / LOWONGAN</label><input class="input" id="roleInput" placeholder="Contoh: Junior Data Analyst"></div><div class="field"><label>PERUSAHAAN</label><input class="input" id="companyInput" placeholder="Nama perusahaan"></div><div class="field full"><label>DESKRIPSI / KUALIFIKASI LOWONGAN</label><textarea class="textarea" id="jdInput" placeholder="Tempelkan deskripsi lowongan di sini..."></textarea></div></div><div class="match-row"><span id="matchNote">Analisis kata kunci berjalan di browser.</span><button class="btn btn-light btn-sm" id="btnAnalyze">Analisis kata kunci</button></div></div>
+    <div id="sectionsEditor"></div>
+    <div class="add-section-row"><select id="newSectionType" class="select"><option value="entries">Section berisi item & bullet</option><option value="summary">Ringkasan</option><option value="certifications">Daftar sertifikasi</option><option value="skills">Grup skill / bahasa</option></select><button class="btn btn-primary" id="btnAddSection">＋ Tambah Section</button></div>
+    <div class="footer-note">Ekspor hasil yang diperlukan sebelum menutup tab atau menghapus sesi.</div>
+  </section>
+  <aside class="preview-col panel"><div class="preview-top"><span>Pratinjau CV</span><span id="previewDocName">CV Master</span></div><div class="preview-scroll"><article id="paper" class="paper"></article></div></aside>
+</section>
+</main>
+<div id="docxPrintHost" aria-hidden="true"></div>
+<div id="toast" class="toast"></div>
+<div id="modalBackdrop" class="modal-backdrop"><div class="modal"><h3 id="modalTitle">Konfirmasi</h3><p id="modalText"></p><div id="modalBody"></div><div class="modal-actions"><button id="modalCancel" class="btn btn-light">Batal</button><button id="modalConfirm" class="btn btn-danger">Lanjutkan</button></div></div></div>
+<script src="https://unpkg.com/mammoth@1.8.0/mammoth.browser.min.js"></script>
+<script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="https://unpkg.com/docx-preview@0.4.1/dist/docx-preview.min.js"></script>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const uid=()=>Math.random().toString(36).slice(2,10);
+const clone=x=>JSON.parse(JSON.stringify(x));
+let master=null,target=null,current='master',saved={master:false,target:false},analysis={master:null,target:null},toastTimer;
+let masterTemplateBuffer=null,templateCatalog=null,masterBaseline=null;
+let sensitiveProfileUnlocked=false;
+const HEADINGS=['RINGKASAN','PENDIDIKAN','PENGALAMAN','PENGALAMAN PROYEK','SERTIFIKASI','ORGANISASI','KEMAMPUAN'];
+const norm=s=>(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').trim();
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(msg){const el=$('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2800)}
+function data(){return current==='master'?master:target}
+function idName(){return current==='master'?'CV Master':'Resume Target'}
+function parseLineBullet(line){const s=line.trim(),m=s.match(/^(?:[•●▪◦·]|\*|\u2022|\.|-)+\s*(.*)$/);return m?{bullet:true,text:m[1].trim()}:{bullet:false,text:s}}
+function hasDate(s){return /(?:19|20)\d{2}|sekarang|present|jan(?:uari)?|feb(?:ruari)?|mar(?:et)?|apr(?:il)?|mei|jun(?:i)?|jul(?:i)?|agu(?:stus)?|sep(?:tember)?|okt(?:ober)?|nov(?:ember)?|des(?:ember)?|january|february|march|april|june|july|august|september|october|november|december/i.test(s||'')}
+function isUpperOrg(s){const a=(s.match(/[A-Za-z]/g)||[]).length,b=(s.match(/[A-Z]/g)||[]).length;return a>=5&&b/a>.68}
+function titleCaseSection(n){return ({RINGKASAN:'Ringkasan',PENDIDIKAN:'Pendidikan',PENGALAMAN:'Pengalaman','PENGALAMAN PROYEK':'Pengalaman Proyek',SERTIFIKASI:'Sertifikasi',ORGANISASI:'Organisasi',KEMAMPUAN:'Kemampuan'})[n]||n}
+function parseSkills(body){
+ const text=body.join(' '),re=/(Hard Skills|Soft Skills|Tools|Bahasa)\s*:\s*/ig,matches=[...text.matchAll(re)],groups=[];
+ if(!matches.length)return [{id:uid(),title:'Skills',tags:text.split(/[,;]+/).map(x=>x.trim()).filter(Boolean).map(title=>({id:uid(),title}))}];
+ for(let i=0;i<matches.length;i++){const m=matches[i],chunk=text.slice(m.index+m[0].length,i+1<matches.length?matches[i+1].index:text.length).trim();groups.push({id:uid(),title:m[1],tags:chunk.split(/[,;]+/).map(x=>x.replace(/[.\s]+$/,'').trim()).filter(Boolean).map(title=>({id:uid(),title}))})}
+ return groups;
+}
+function parseEntries(body,heading){
+ const out=[];let i=0;
+ while(i<body.length){
+  const parsed=parseLineBullet(body[i]);
+  if(parsed.bullet){if(!out.length)out.push({id:uid(),title:'Informasi tambahan',subtitle:'',bullets:[]});out[out.length-1].bullets.push(parsed.text);i++;continue}
+  const item={id:uid(),title:body[i],subtitle:'',bullets:[]};i++;
+  if(i<body.length&&!parseLineBullet(body[i]).bullet&&!HEADINGS.includes(norm(body[i]))&&(heading==='PENDIDIKAN'||hasDate(body[i]))){item.subtitle=body[i];i++}
+  while(i<body.length){
+   if(parseLineBullet(body[i]).bullet){item.bullets.push(parseLineBullet(body[i]).text);i++;continue}
+   const nextIsSubtitle=i+1<body.length&&!parseLineBullet(body[i+1]).bullet&&hasDate(body[i+1]);
+   if((heading==='PENDIDIKAN'&&(/^\(\s*(?:19|20)\d{2}/.test(body[i])||isUpperOrg(body[i])))||(heading!=='PENDIDIKAN'&&isUpperOrg(body[i])&&i+1<body.length&&hasDate(body[i+1]))||nextIsSubtitle)break;
+   break;
+  }
+  out.push(item);
+ }
+ return out;
+}
+function parseDocText(raw){
+ const lines=raw.split(/\r?\n/).map(s=>s.replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim()).filter(Boolean);
+ if(!lines.length)throw Error('Dokumen tidak memiliki teks yang dapat dibaca.');
+ const headings=[];lines.forEach((l,i)=>{const n=norm(l);if(HEADINGS.includes(n))headings.push({i,n})});
+ if(!headings.length)throw Error('Judul section standar tidak ditemukan. Pastikan dokumen memiliki heading seperti RINGKASAN, PENDIDIKAN, PENGALAMAN, SERTIFIKASI, atau KEMAMPUAN.');
+ const pre=lines.slice(0,headings[0].i),name=pre.find(l=>/[A-Za-z]/.test(l))||'Nama',headline=pre.find(l=>l!==name&&!/linkedin|portofolio|portfolio|@/.test(l)&&!/[+]?\d{8,}/.test(l))||'',contact=pre.find(l=>l.includes('@')||/[+]?\d[\d ()-]{8,}/.test(l))||'',email=(raw.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)||[])[0]||'',phone=(contact.match(/\+?\d[\d ()-]{8,}\d/)||[])[0]||'',linkedin=(raw.match(/linkedin\.com\/in\/[A-Za-z0-9_-]+/i)||[])[0]||'',portfolio=(raw.match(/(?:portofolio|portfolio)\s*:?\s*([^\s|]+)/i)||[])[1]||'';
+ const profile={name,headline,location:contact.split('|')[0]?.trim()||'',phone,email,linkedin,portfolio},sections=[];
+ for(let k=0;k<headings.length;k++){
+  const h=headings[k],body=lines.slice(h.i+1,k+1<headings.length?headings[k+1].i:lines.length);if(!body.length)continue;
+  if(h.n==='RINGKASAN')sections.push({id:uid(),title:'Ringkasan',type:'summary',text:body.join(' ')});
+  else if(h.n==='KEMAMPUAN')sections.push({id:uid(),title:'Kemampuan',type:'skills',items:parseSkills(body)});
+  else if(h.n==='SERTIFIKASI')sections.push({id:uid(),title:'Sertifikasi',type:'certifications',items:body.map(l=>parseLineBullet(l).text).filter(Boolean).map(title=>({id:uid(),title}))});
+  else sections.push({id:uid(),title:titleCaseSection(h.n),type:'entries',items:parseEntries(body,h.n)});
+ }
+ if(!sections.some(s=>s.type==='summary'))sections.unshift({id:uid(),title:'Ringkasan',type:'summary',text:''});
+ return {profile,sections,meta:{role:'',company:'',jobDescription:''}};
+}
+function render(){
+ if(!master){$('welcome').classList.remove('hidden');$('workspace').classList.add('hidden');return}
+ $('welcome').classList.add('hidden');$('workspace').classList.remove('hidden');const d=data();
+ $('tabMaster').classList.toggle('active',current==='master');$('tabTarget').classList.toggle('active',current==='target');$('tabTarget').disabled=!target;$('targetSub').textContent=target?(target.meta.role||'Resume disesuaikan'):'Belum dibuat';$('masterCount').textContent=`${master.sections.length} section`;
+ $('docHeading').textContent=idName();$('docSubheading').textContent=current==='master'?'Sumber utama · kontak dikunci':'Salinan mandiri · disesuaikan untuk lowongan';$('previewDocName').textContent=idName();$('btnNewTarget').classList.toggle('hidden',current==='target');$('targetBox').classList.toggle('hidden',current!=='target');
+ renderProfile(d);renderNav(d);renderSections(d);renderPreview(d);
+ if(current==='target'){$('roleInput').value=d.meta.role||'';$('companyInput').value=d.meta.company||'';$('jdInput').value=d.meta.jobDescription||'';$('matchStatus').textContent=analysis.target?`${analysis.target.ids.size} item cocok`:'Belum dianalisis'}
+}
+function renderProfile(d){
+ const p=d.profile,fields=[['Nama','name'],['Headline / posisi','headline'],['Lokasi','location'],['Nomor telepon','phone'],['Email','email'],['LinkedIn','linkedin'],['Portfolio / website','portfolio']];
+ $('profileEditor').innerHTML=fields.map(([label,key])=>{const editable=key==='headline'||sensitiveProfileUnlocked;return `<div class="field ${key==='headline'?'full':''}"><label>${escapeHTML(label.toUpperCase())}${editable?' · EDITABLE':' · TERKUNCI'}</label><input class="input" data-profile="${key}" autocomplete="off" value="${escapeHTML(p[key]||'')}" ${editable?'':'readonly'}></div>`}).join('');
+ $('profileLockState').textContent=sensitiveProfileUnlocked?'Profil sensitif dapat diedit':'Profil sensitif terkunci';
+ $('toggleSensitiveProfile').textContent=sensitiveProfileUnlocked?'Kunci Profil Sensitif':'Edit Profil Sensitif';
+ $('toggleSensitiveProfile').className='btn btn-sm '+(sensitiveProfileUnlocked?'btn-primary':'btn-light');
+ $('profileEditor').querySelectorAll('[data-profile]').forEach(el=>el.addEventListener('input',()=>{d.profile[el.dataset.profile]=el.value;saved[current]=false;renderPreview(d)}));
+}
+function normalizeProfileUrl(value,kind){
+ const v=String(value||'').trim();if(!v)return '';if(kind==='email')return /^mailto:/i.test(v)?v:'mailto:'+v;
+ if(/^https?:\/\//i.test(v))return v;if(v.startsWith('//'))return 'https:'+v;return 'https://'+v.replace(/^\/+/, '');
+}
+function profileAnchor(value,kind,label){
+ if(!String(value||'').trim())return '';const href=normalizeProfileUrl(value,kind);
+ return `<a href="${escapeHTML(href)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label||value)}</a>`;
+}
+function renderNav(d){
+ $('sectionNav').innerHTML=d.sections.map(s=>`<button class="section-link" data-jump="${s.id}">${escapeHTML(s.title||'Section tanpa judul')}</button>`).join('');
+ $('sectionNav').querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>document.getElementById('sec-'+b.dataset.jump)?.scrollIntoView({behavior:'smooth',block:'start'}));
+}
+function moveSection(d,i,delta){const j=i+delta;if(j<0||j>=d.sections.length)return;[d.sections[i],d.sections[j]]=[d.sections[j],d.sections[i]];saved[current]=false;render()}
+function moveItem(s,i,delta){const j=i+delta;if(j<0||j>=s.items.length)return;[s.items[i],s.items[j]]=[s.items[j],s.items[i]];saved[current]=false;render()}
+function renderSections(d){
+ const root=$('sectionsEditor');root.innerHTML='';
+ if(!d.sections.length){root.innerHTML='<div class="empty-state">Belum ada section. Tambahkan section di bawah.</div>';return}
+ d.sections.forEach((s,index)=>{
+  const card=document.createElement('section');card.className='panel section-card';card.id='sec-'+s.id;
+  card.innerHTML=`<div class="section-card-header"><span>⠿</span><input class="section-title-input" aria-label="Nama section" value="${escapeHTML(s.title)}" data-title><span class="type-pill">${s.type}</span><div class="section-actions"><button class="icon-btn" title="Naik" data-up ${index===0?'disabled':''}>↑</button><button class="icon-btn" title="Turun" data-down ${index===d.sections.length-1?'disabled':''}>↓</button><button class="icon-btn" title="Hapus section" data-delete>×</button></div></div><div class="section-content" data-content></div>`;
+  card.querySelector('[data-title]').oninput=e=>{s.title=e.target.value;saved[current]=false;renderNav(d);renderPreview(d)};
+  card.querySelector('[data-up]').onclick=()=>moveSection(d,index,-1);card.querySelector('[data-down]').onclick=()=>moveSection(d,index,1);
+  card.querySelector('[data-delete]').onclick=()=>confirmModal('Hapus section?',`Section "${s.title}" beserta isinya akan dihapus.`,()=>{d.sections.splice(index,1);saved[current]=false;render()});
+  const c=card.querySelector('[data-content]');if(s.type==='summary')renderSummary(s,c);else if(s.type==='entries')renderEntries(s,c);else if(s.type==='certifications')renderCerts(s,c);else renderSkills(s,c);root.appendChild(card);
+ });
+}
+function renderSummary(s,root){
+ root.innerHTML='<div class="field"><label>ISI RINGKASAN</label><textarea class="textarea" data-summary placeholder="Ringkasan profesional..."></textarea></div>';
+ root.querySelector('[data-summary]').value=s.text||'';root.querySelector('[data-summary]').oninput=e=>{s.text=e.target.value;saved[current]=false;renderPreview(data())};
+}
+function renderEntries(s,root){
+ if(!s.items.length)root.innerHTML='<div class="empty-state">Belum ada item di section ini.</div>';
+ s.items.forEach((it,i)=>{
+  const entry=document.createElement('div');entry.className='entry-card';entry.dataset.entry=it.id;
+  entry.innerHTML=`<div class="entry-top"><div class="entry-inputs"><div><span class="mini-label">JUDUL / ORGANISASI / PROYEK</span><input class="input" data-title placeholder="Judul item" value="${escapeHTML(it.title||'')}"></div><div><span class="mini-label">JABATAN / TANGGAL / SUBJUDUL</span><input class="input" data-sub placeholder="Jabatan atau periode" value="${escapeHTML(it.subtitle||'')}"></div></div><div class="entry-tools"><button class="icon-btn" title="Naik" data-up ${i===0?'disabled':''}>↑</button><button class="icon-btn" title="Turun" data-down ${i===s.items.length-1?'disabled':''}>↓</button><button class="icon-btn" title="Hapus item" data-del>×</button></div></div><div class="bullet-list" data-bullets></div><div class="item-footer"><button class="btn btn-light btn-sm" data-addbullet>＋ Tambah deskripsi / bullet</button></div>`;
+  entry.querySelector('[data-title]').oninput=e=>{it.title=e.target.value;saved[current]=false;renderPreview(data())};entry.querySelector('[data-sub]').oninput=e=>{it.subtitle=e.target.value;saved[current]=false;renderPreview(data())};
+  entry.querySelector('[data-up]').onclick=()=>moveItem(s,i,-1);entry.querySelector('[data-down]').onclick=()=>moveItem(s,i,1);entry.querySelector('[data-del]').onclick=()=>confirmModal('Hapus item?',`"${it.title||'Item tanpa judul'}" akan dihapus.`,()=>{s.items.splice(i,1);saved[current]=false;render()});
+  const list=entry.querySelector('[data-bullets]');if(!(it.bullets||[]).length)list.innerHTML='<div class="status">Belum ada deskripsi.</div>';
+  (it.bullets||[]).forEach((b,j)=>{const row=document.createElement('div');row.className='bullet-row';row.innerHTML=`<span class="bullet-dot">•</span><textarea class="textarea" data-bullet>${escapeHTML(b)}</textarea><button class="icon-btn" title="Hapus deskripsi" data-bdel>×</button>`;row.querySelector('[data-bullet]').oninput=e=>{it.bullets[j]=e.target.value;saved[current]=false;renderPreview(data())};row.querySelector('[data-bdel]').onclick=()=>{it.bullets.splice(j,1);saved[current]=false;render()};list.appendChild(row)});
+  entry.querySelector('[data-addbullet]').onclick=()=>{it.bullets=it.bullets||[];it.bullets.push('');saved[current]=false;render()};
+  root.appendChild(entry);
+ });
+ const add=document.createElement('button');add.className='btn btn-light';add.textContent='＋ Tambah item baru';add.onclick=()=>{s.items.push({id:uid(),title:'',subtitle:'',bullets:[]});saved[current]=false;render()};root.appendChild(add);
+}
+function renderCerts(s,root){
+ if(!s.items.length)root.innerHTML='<div class="empty-state">Belum ada sertifikasi.</div>';
+ s.items.forEach((it,i)=>{const row=document.createElement('div');row.className='cert-row';row.innerHTML=`<span class="bullet-dot">•</span><input class="input" value="${escapeHTML(it.title||'')}" placeholder="Nama sertifikasi" data-cert><button class="icon-btn" title="Hapus sertifikasi" data-del>×</button>`;row.querySelector('[data-cert]').oninput=e=>{it.title=e.target.value;saved[current]=false;renderPreview(data())};row.querySelector('[data-del]').onclick=()=>{s.items.splice(i,1);saved[current]=false;render()};root.appendChild(row)});
+ const add=document.createElement('button');add.className='btn btn-light';add.textContent='＋ Tambah sertifikasi';add.onclick=()=>{s.items.push({id:uid(),title:''});saved[current]=false;render()};root.appendChild(add);
+}
+function renderSkills(s,root){
+ if(!s.items.length)root.innerHTML='<div class="empty-state">Belum ada grup skill.</div>';
+ s.items.forEach((g,i)=>{
+  const div=document.createElement('div');div.className='skill-group';div.innerHTML=`<div class="skill-top"><input class="input" data-group-title value="${escapeHTML(g.title||'')}" placeholder="Nama grup, misalnya Hard Skills"><button class="icon-btn" title="Hapus grup" data-group-del>×</button></div><div class="tag-list" data-tags></div><form class="tag-add"><input class="input" data-newtag placeholder="Tambah skill / bahasa / tools"><button class="btn btn-light btn-sm" type="submit">Tambah</button></form>`;
+  div.querySelector('[data-group-title]').oninput=e=>{g.title=e.target.value;saved[current]=false;renderPreview(data())};div.querySelector('[data-group-del]').onclick=()=>{s.items.splice(i,1);saved[current]=false;render()};
+  const tags=div.querySelector('[data-tags]');(g.tags||[]).forEach((t,j)=>{const tag=document.createElement('span');tag.className='tag';tag.innerHTML=`${escapeHTML(t.title)} <button title="Hapus skill">×</button>`;tag.querySelector('button').onclick=()=>{g.tags.splice(j,1);saved[current]=false;render()};tags.appendChild(tag)});
+  div.querySelector('form').onsubmit=e=>{e.preventDefault();const input=div.querySelector('[data-newtag]'),v=input.value.trim();if(v){g.tags=g.tags||[];g.tags.push({id:uid(),title:v});saved[current]=false;render()}};
+  root.appendChild(div);
+ });
+ const add=document.createElement('button');add.className='btn btn-light';add.textContent='＋ Tambah grup';add.onclick=()=>{s.items.push({id:uid(),title:'Grup baru',tags:[]});saved[current]=false;render()};root.appendChild(add);
+}
+function renderPreview(d){
+ if(!d)return;const p=d.profile;const contactParts=[];
+ if(p.location)contactParts.push(escapeHTML(p.location));if(p.phone)contactParts.push(escapeHTML(p.phone));if(p.email)contactParts.push(profileAnchor(p.email,'email'));
+ if(p.linkedin)contactParts.push('LinkedIn: '+profileAnchor(p.linkedin,'web'));if(p.portfolio)contactParts.push('Portfolio: '+profileAnchor(p.portfolio,'web'));
+ let html=`<h1 class="pv-name">${escapeHTML(p.name||'Nama Anda')}</h1><div class="pv-headline">${escapeHTML(p.headline||'')}</div><div class="pv-contact">${contactParts.join(' &nbsp;|&nbsp; ')}</div>`;
+ d.sections.forEach(s=>{html+=`<section class="pv-section"><h4>${escapeHTML((s.title||'SECTION').toUpperCase())}</h4>`;
+  if(s.type==='summary')html+=`<div class="pv-summary">${escapeHTML(s.text||'')}</div>`;
+  else if(s.type==='entries')s.items.forEach(it=>{html+=`<div class="pv-entry"><p class="pv-entry-title">${escapeHTML(it.title||'')}</p>${it.subtitle?`<p class="pv-entry-sub">${escapeHTML(it.subtitle)}</p>`:''}`;if((it.bullets||[]).filter(Boolean).length)html+=`<ul>${it.bullets.filter(Boolean).map(b=>`<li>${escapeHTML(b)}</li>`).join('')}</ul>`;html+='</div>'});
+  else if(s.type==='certifications')html+=`<ul class="pv-list">${s.items.filter(it=>it.title).map(it=>`<li>${escapeHTML(it.title)}</li>`).join('')}</ul>`;
+  else html+=s.items.map(g=>`<p class="pv-skills"><b>${escapeHTML(g.title)}:</b> ${escapeHTML((g.tags||[]).map(t=>t.title).filter(Boolean).join(', '))}</p>`).join('');
+  html+='</section>'});
+ $('paper').innerHTML=html;document.querySelectorAll('.entry-card').forEach(el=>el.classList.toggle('relevant',!!analysis[current]?.ids?.has(el.dataset.entry)));
+}
+function switchDoc(which){if(which==='target'&&!target){toast('Buat Resume Target terlebih dahulu.');return}current=which;render()}
+function newTarget(){
+ if(!master)return;const form=document.createElement('div');form.innerHTML=`<div class="field" style="margin-top:12px"><label>JUDUL POSISI</label><input id="newRole" class="input" placeholder="Contoh: Quality Assurance Analyst"></div><div class="field" style="margin-top:10px"><label>PERUSAHAAN</label><input id="newCompany" class="input" placeholder="Nama perusahaan (opsional)"></div><div class="field" style="margin-top:10px"><label>DESKRIPSI LOWONGAN</label><textarea id="newJD" class="textarea" placeholder="Tempel deskripsi lowongan (opsional)"></textarea></div>`;
+ modal('Buat Resume Target','CV Master akan diduplikasi. Perubahan berikutnya tidak mengubah master.',()=>{target=clone(master);target.meta={role:$('newRole').value.trim(),company:$('newCompany').value.trim(),jobDescription:$('newJD').value.trim()};if(target.meta.role)target.profile.headline=target.meta.role;current='target';saved.target=false;analysis.target=null;render();toast('Resume Target dibuat. CV Master tetap utuh.')},'Buat salinan',form);
+}
+function modal(title,text,confirm,label='Lanjutkan',body=null){
+ $('modalTitle').textContent=title;$('modalText').textContent=text;$('modalBody').innerHTML='';if(body)$('modalBody').appendChild(body);$('modalConfirm').textContent=label;$('modalConfirm').className='btn btn-primary';$('modalCancel').classList.remove('hidden');$('modalBackdrop').classList.add('show');$('modalCancel').onclick=closeModal;$('modalConfirm').onclick=()=>{closeModal();confirm()};
+}
+function confirmModal(title,text,fn){modal(title,text,fn,'Hapus')}
+function closeModal(){$('modalBackdrop').classList.remove('show')}
+function addSection(){
+ const d=data();if(!d)return;const type=$('newSectionType').value,title=type==='summary'?'Ringkasan Baru':type==='entries'?'Pengalaman Baru':type==='certifications'?'Sertifikasi Baru':'Grup Skill Baru',sec={id:uid(),title,type,text:'',items:[]};
+ d.sections.push(sec);saved[current]=false;render();document.getElementById('sec-'+sec.id)?.scrollIntoView({behavior:'smooth'});
+}
+function analyze(){
+ if(current!=='target'||!target)return;const text=(target.meta.role+' '+target.meta.company+' '+target.meta.jobDescription).toLowerCase(),stop=new Set('dengan untuk yang dari dan atau the and for with will have has this that are you our your job role ability skills experience minimum preferred lebih pada dalam serta dapat mampu memiliki bisa akan sebagai adalah tahun kerja pekerjaan posisi perusahaan kami their they must work team good strong knowledge related including such'.split(' '));
+ const words=[...new Set((text.match(/[a-zA-ZÀ-ÿ][a-zA-ZÀ-ÿ+#.\/-]{2,}/g)||[]).map(w=>w.toLowerCase()).filter(w=>!stop.has(w)))],ids=new Set();let found=0;
+ target.sections.forEach(s=>{if(s.type==='entries')s.items.forEach(it=>{const content=(it.title+' '+it.subtitle+' '+(it.bullets||[]).join(' ')).toLowerCase();let n=0;words.forEach(w=>{if(content.includes(w))n++});if(n){ids.add(it.id);found+=n}});else if(s.type==='skills')s.items.forEach(g=>g.tags.forEach(t=>{if(words.some(w=>t.title.toLowerCase().includes(w)))found++}))});
+ analysis.target={ids,words};saved.target=false;render();$('matchStatus').textContent=`${ids.size} item dengan kecocokan`;$('matchNote').textContent=`${words.length} kata kunci kandidat · ${found} kecocokan. Periksa manual untuk memastikan relevansinya.`;toast(`${ids.size} item memiliki kata kunci cocok. Ini bukan penilaian ATS.`);
+}
+function save(){saved[current]=true;toast(`${idName()} ditandai tersimpan dalam sesi. Ekspor Word/PDF agar hasil tidak hilang.`)}
+const WORD_NS='http://schemas.openxmlformats.org/wordprocessingml/2006/main',XML_NS='http://www.w3.org/XML/1998/namespace';
+function wordText(p){return Array.from(p.getElementsByTagNameNS(WORD_NS,'t')).map(t=>t.textContent||'').join('')}
+function paragraphHas(p,tag){return p.getElementsByTagNameNS(WORD_NS,tag).length>0}
+function paragraphHasSectionBreak(p){const ppr=p.getElementsByTagNameNS(WORD_NS,'pPr')[0];return !!(ppr&&ppr.getElementsByTagNameNS(WORD_NS,'sectPr').length)}
+function paragraphIsBullet(p){return paragraphHas(p,'numPr')}
+function paragraphIsBold(p){const runs=Array.from(p.getElementsByTagNameNS(WORD_NS,'r')).filter(r=>Array.from(r.getElementsByTagNameNS(WORD_NS,'t')).some(t=>(t.textContent||'').trim()));return runs.length>0&&runs.every(run=>{const rpr=Array.from(run.children||[]).find(el=>el.namespaceURI===WORD_NS&&el.localName==='rPr');return !!rpr&&['b','bCs'].some(n=>{const x=Array.from(rpr.children||[]).find(e=>e.namespaceURI===WORD_NS&&e.localName===n);return x&&x.getAttributeNS(WORD_NS,'val')!=='0'})})}
+function setParagraphText(p,text){
+ const nodes=Array.from(p.getElementsByTagNameNS(WORD_NS,'t'));if(!nodes.length)return p;nodes[0].textContent=String(text??'');if(/(^\s|\s$)/.test(String(text??'')))nodes[0].setAttributeNS(XML_NS,'xml:space','preserve');else nodes[0].removeAttributeNS(XML_NS,'space');for(let i=1;i<nodes.length;i++)nodes[i].textContent='';return p;
+}
+function setSkillParagraph(p,g){
+ const runs=Array.from(p.getElementsByTagNameNS(WORD_NS,'r')).filter(r=>Array.from(r.getElementsByTagNameNS(WORD_NS,'t')).some(t=>(t.textContent||'').length>0)),content=(g.tags||[]).map(t=>t.title).filter(Boolean).join(', ');
+ if(!runs.length)return setParagraphText(p,`${g.title} : ${content}`);
+ const first=Array.from(runs[0].getElementsByTagNameNS(WORD_NS,'t'))[0];first.textContent=`${g.title} : `;first.setAttributeNS(XML_NS,'xml:space','preserve');
+ if(runs[1]){const t=Array.from(runs[1].getElementsByTagNameNS(WORD_NS,'t'))[0];t.textContent=content}
+ for(const r of runs.slice(2))for(const t of Array.from(r.getElementsByTagNameNS(WORD_NS,'t')))t.textContent='';
+ return p;
+}
+async function buildTemplateCatalog(buffer,parsedMaster){
+ const zip=await window.JSZip.loadAsync(buffer),xml=await zip.file('word/document.xml').async('string'),xmlDoc=new DOMParser().parseFromString(xml,'application/xml'),body=xmlDoc.getElementsByTagNameNS(WORD_NS,'body')[0];
+ if(!body)throw Error('Isi dokumen Word tidak ditemukan.');
+ const children=Array.from(body.childNodes).filter(n=>n.nodeType===1),paras=children.filter(n=>n.namespaceURI===WORD_NS&&n.localName==='p'),keyOf=t=>{const k=norm(t);return HEADINGS.includes(k)?k:''},first=children.findIndex(n=>n.namespaceURI===WORD_NS&&n.localName==='p'&&keyOf(wordText(n)));
+ if(first<0)throw Error('Heading section standar tidak ditemukan dalam Word.');
+ const headerNodes=children.slice(0,first).filter(n=>n.namespaceURI===WORD_NS&&n.localName==='p'),cats={};let active='';
+ for(const p of paras){const h=keyOf(wordText(p));if(h){active=h;if(!cats[h])cats[h]={key:h,heading:p,paras:[],breakPara:null,templates:{}};continue}if(active){cats[active].paras.push(p);if(paragraphHasSectionBreak(p)&&!cats[active].breakPara)cats[active].breakPara=p}}
+ const blank=paras.find(p=>!wordText(p).trim()&&!paragraphHasSectionBreak(p)&&!p.getElementsByTagNameNS(WORD_NS,'pBdr').length)||null;
+ for(const [key,c] of Object.entries(cats)){
+  const content=c.paras.filter(p=>wordText(p).trim());
+  if(key==='RINGKASAN')c.templates.summary=content[0]||null;if(key==='SERTIFIKASI')c.templates.cert=content.find(paragraphIsBullet)||content[0]||null;
+  if(key==='KEMAMPUAN')c.templates.skill=content.find(p=>/^(Hard Skills|Soft Skills|Tools|Bahasa)\s*:/i.test(wordText(p)))||content[0]||null;
+  c.templates.title=content.find(p=>!paragraphIsBullet(p)&&paragraphIsBold(p)&&!keyOf(wordText(p))&&!/^(Hard Skills|Soft Skills|Tools|Bahasa)\s*:/i.test(wordText(p)))||content.find(p=>!paragraphIsBullet(p)&&!keyOf(wordText(p)))||null;
+  if(c.templates.title){const i=c.paras.indexOf(c.templates.title);c.templates.subtitle=c.paras.slice(i+1).find(p=>wordText(p).trim()&&!paragraphIsBullet(p)&&!paragraphHasSectionBreak(p))||null}
+  c.templates.bullet=content.find(paragraphIsBullet)||null;const blanks=c.paras.filter(p=>!wordText(p).trim()&&!paragraphHasSectionBreak(p));c.blankAfterBreak=c.breakPara?c.paras.slice(c.paras.indexOf(c.breakPara)+1).find(p=>!wordText(p).trim()&&!paragraphHasSectionBreak(p))||null:null;c.blankAfterHeading=c.blankAfterBreak||blanks[0]||null;c.blankBetween=blanks[0]||null;c.blankAfterContent=blanks[blanks.length-1]||null;
+ }
+ const catsList=Object.values(cats),global={heading:catsList.map(c=>c.heading)[0]||paras.find(paragraphIsBold),blank,summary:cats.RINGKASAN?.templates.summary||catsList.flatMap(c=>c.paras).find(p=>wordText(p).length>180),title:catsList.map(c=>c.templates.title).find(Boolean),subtitle:catsList.map(c=>c.templates.subtitle).find(Boolean),bullet:catsList.map(c=>c.templates.bullet).find(Boolean),cert:cats.SERTIFIKASI?.templates.cert||catsList.map(c=>c.templates.bullet).find(Boolean),skill:cats.KEMAMPUAN?.templates.skill||null};
+ return {zip,xmlDoc,body,children,paras,headerNodes,cats,global,blank,headlineNorm:(preText(headerNodes[1])||'').toLowerCase()};
+}
+function preText(p){return p?wordText(p):''}
+function exactPara(cat,text,role){
+ if(!cat||!text)return null;const wanted=String(text).trim().toLowerCase(),xs=cat.paras.filter(p=>wordText(p).trim().toLowerCase()===wanted);if(!xs.length)return null;
+ if(role==='bullet')return xs.find(paragraphIsBullet)||null;if(role==='title')return xs.find(p=>!paragraphIsBullet(p)&&paragraphIsBold(p))||xs[0];return xs[0];
+}
+function sectionKey(s){
+ const n=norm(s.title||'');if(n.includes('PENDIDIKAN')||n.includes('EDUCATION'))return 'PENDIDIKAN';if(n.includes('PROYEK')||n.includes('PROJECT'))return 'PENGALAMAN PROYEK';if(n.includes('ORGANISASI')||n.includes('ORGANIZATION'))return 'ORGANISASI';if(n.includes('PENGALAMAN')||n.includes('EXPERIENCE')||n.includes('WORK'))return 'PENGALAMAN';if(n.includes('SERTIFIKASI')||n.includes('CERTIFICATION'))return 'SERTIFIKASI';if(n.includes('KEMAMPUAN')||n.includes('SKILL'))return 'KEMAMPUAN';if(n.includes('RINGKASAN')||n.includes('SUMMARY')||n.includes('PROFILE'))return 'RINGKASAN';return s.type==='summary'?'RINGKASAN':s.type==='certifications'?'SERTIFIKASI':s.type==='skills'?'KEMAMPUAN':'PENGALAMAN';
+}
+function makePara(key,text,role){
+ const c=templateCatalog.cats[key],match=exactPara(c,text,role),proto=role==='summary'?c?.templates.summary:role==='cert'?c?.templates.cert:role==='title'?c?.templates.title:role==='subtitle'?c?.templates.subtitle:role==='bullet'?c?.templates.bullet:templateCatalog.global[role];
+ if(match)return match.cloneNode(true);if(!proto)return null;return setParagraphText(proto.cloneNode(true),text);
+}
+function makeSkill(key,g){
+ const c=templateCatalog.cats[key],proto=c?.paras.find(p=>new RegExp('^'+g.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*:','i').test(wordText(p)))||c?.templates.skill||templateCatalog.global.skill;if(!proto)return null;
+ const baseline=masterBaseline?.sections.flatMap(s=>s.items||[]).find(x=>x.id===g.id),same=baseline&&baseline.title===g.title&&JSON.stringify((baseline.tags||[]).map(t=>t.title))===JSON.stringify((g.tags||[]).map(t=>t.title));
+ return same?proto.cloneNode(true):setSkillParagraph(proto.cloneNode(true),g);
+}
+function blankFor(key,which){
+ const c=templateCatalog.cats[key];let p=which==='heading'?(c?.blankAfterHeading||c?.blankAfterBreak):which==='trailing'?(c?.blankAfterContent||c?.blankBetween):c?.blankBetween;p=p||templateCatalog.blank;return p?p.cloneNode(true):null;
+}
+function afterSource(key,text,role){
+ const c=templateCatalog.cats[key];if(!c)return null;const source=exactPara(c,text,role);if(!source)return null;const next=c.paras[c.paras.indexOf(source)+1];return next&&!wordText(next).trim()&&!paragraphHasSectionBreak(next)?next.cloneNode(true):null;
+}
+function textNodesOutsideHyperlinks(paragraph){
+ return Array.from(paragraph.getElementsByTagNameNS(WORD_NS,'t')).filter(node=>{
+  let parent=node.parentNode;while(parent&&parent!==paragraph){if(parent.namespaceURI===WORD_NS&&parent.localName==='hyperlink')return false;parent=parent.parentNode}return true;
+ });
+}
+function setTextNode(node,value){node.textContent=String(value??'');if(/^\s|\s$/.test(String(value??'')))node.setAttributeNS(XML_NS,'xml:space','preserve');else node.removeAttributeNS(XML_NS,'space')}
+function hyperLinks(paragraph){return paragraph?Array.from(paragraph.getElementsByTagNameNS(WORD_NS,'hyperlink')):[]}
+function buildHeaderParagraphs(d){
+ const header=templateCatalog.headerNodes.map(p=>p.cloneNode(true)),p=d.profile||{};
+ if(header[0])setParagraphText(header[0],p.name||'');
+ if(header[1])setParagraphText(header[1],p.headline||'');
+ // Contact paragraph: location | phone | email. Keep the original Word hyperlink run for email.
+ if(header[2]){
+  const plain=textNodesOutsideHyperlinks(header[2]),links=hyperLinks(header[2]);
+  const beforeEmail=[p.location,p.phone].map(v=>String(v||'').trim()).filter(Boolean).join(' | ');
+  if(plain[0])setTextNode(plain[0],beforeEmail+(p.email&&beforeEmail?' | ':''));
+  links.forEach((link,i)=>{if(i===0)setParagraphText(link,p.email||'')});
+ }
+ // Link paragraph: preserve Word hyperlink styling and update the visible text.
+ if(header[3]){
+  const plain=textNodesOutsideHyperlinks(header[3]),links=hyperLinks(header[3]);
+  if(plain[0])setTextNode(plain[0],p.linkedin?'Linkedin: ':(p.portfolio?'':'') );
+  if(links[0])setParagraphText(links[0],p.linkedin||'');
+  if(plain[1])setTextNode(plain[1],p.linkedin&&p.portfolio?' | Portofolio: ':p.portfolio?'Portofolio: ':'');
+  if(links[1])setParagraphText(links[1],p.portfolio||'');
+ }
+ return header;
+}
+function relationIdFromHyperlink(link){
+ if(!link)return '';return link.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships','id')||link.getAttribute('r:id')||'';
+}
+function normalizedWebTarget(value){
+ const v=String(value||'').trim();if(!v)return '';if(/^https?:\/\//i.test(v))return v;if(v.startsWith('//'))return 'https:'+v;return 'https://'+v.replace(/^\/+/, '');
+}
+async function updateProfileHyperlinkTargets(zip,d){
+ const file=zip.file('word/_rels/document.xml.rels');if(!file||!templateCatalog)return;
+ const raw=await file.async('string'),doc=new DOMParser().parseFromString(raw,'application/xml');
+ if(doc.getElementsByTagName('parsererror').length)return;
+ const relNS='http://schemas.openxmlformats.org/package/2006/relationships';
+ const links2=hyperLinks(templateCatalog.headerNodes[2]),links3=hyperLinks(templateCatalog.headerNodes[3]);
+ const mapping=[
+  [relationIdFromHyperlink(links2[0]),d.profile.email?(/^mailto:/i.test(d.profile.email)?d.profile.email:'mailto:'+String(d.profile.email).trim()):''],
+  [relationIdFromHyperlink(links3[0]),normalizedWebTarget(d.profile.linkedin)],
+  [relationIdFromHyperlink(links3[1]),normalizedWebTarget(d.profile.portfolio)]
+ ];
+ let changed=false;
+ for(const [id,target] of mapping){if(!id||!target)continue;const rel=Array.from(doc.getElementsByTagNameNS(relNS,'Relationship')).find(el=>el.getAttribute('Id')===id);if(!rel)continue;rel.setAttribute('Target',target);rel.setAttribute('TargetMode','External');changed=true}
+ if(changed)zip.file('word/_rels/document.xml.rels',new XMLSerializer().serializeToString(doc));
+}
+function buildParagraphs(d){
+ const out=[],add=n=>{if(n)out.push(n)};
+ buildHeaderParagraphs(d).forEach(add);
+ d.sections.forEach(s=>{
+  const key=sectionKey(s),cat=templateCatalog.cats[key],h=(cat&&cat.heading)||templateCatalog.global.heading;
+  if(h){const cp=h.cloneNode(true);if(norm(wordText(cp))!==norm(s.title))setParagraphText(cp,(s.title||'SECTION').toUpperCase());add(cp)}
+  add(blankFor(key,'heading'));
+  if(s.type==='summary'){add(makePara(key,s.text||'','summary'));add(afterSource(key,s.text||'','summary')||blankFor(key,'trailing'))}
+  else if(s.type==='entries'){(s.items||[]).forEach(it=>{if(it.title)add(makePara(key,it.title,'title'));if(it.subtitle)add(makePara(key,it.subtitle,'subtitle'));const bs=(it.bullets||[]).filter(b=>String(b||'').trim());bs.forEach(b=>add(makePara(key,b,'bullet')));const t=bs.length?bs[bs.length-1]:it.subtitle||it.title||'';add(afterSource(key,t,bs.length?'bullet':it.subtitle?'subtitle':'title')||blankFor(key,'between'))})}
+  else if(s.type==='certifications'){const xs=(s.items||[]).filter(it=>String(it.title||'').trim());xs.forEach(it=>add(makePara(key,it.title,'cert')));add(xs.length?afterSource(key,xs[xs.length-1].title,'cert')||blankFor(key,'trailing'):blankFor(key,'trailing'))}
+  else if(s.type==='skills'){(s.items||[]).forEach((g,i)=>{add(makeSkill(key,g));if(i<s.items.length-1)add(blankFor(key,'between'))})}
+ });
+ return out.filter(Boolean);
+}
+async function buildExportBlob(which){
+ const d=which==='master'?master:target;if(!d)throw Error(which==='master'?'CV Master belum diimpor.':'Buat Resume Target terlebih dahulu.');
+ if(!masterTemplateBuffer||!templateCatalog)throw Error('Impor ulang CV Master sebelum mengekspor.');
+ if(which==='master'&&masterBaseline&&JSON.stringify(d)===JSON.stringify(masterBaseline))return new Blob([masterTemplateBuffer],{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+ const zip=await window.JSZip.loadAsync(masterTemplateBuffer),xml=await zip.file('word/document.xml').async('string'),xmlDoc=new DOMParser().parseFromString(xml,'application/xml'),body=xmlDoc.getElementsByTagNameNS(WORD_NS,'body')[0];
+ if(!body)throw Error('Isi Word tidak ditemukan.');
+ const ps=buildParagraphs(d),sect=Array.from(body.children).find(n=>n.namespaceURI===WORD_NS&&n.localName==='sectPr');
+ while(body.firstChild)body.removeChild(body.firstChild);ps.forEach(p=>body.appendChild(xmlDoc.importNode(p,true)));if(sect)body.appendChild(sect.cloneNode(true));
+ zip.file('word/document.xml',new XMLSerializer().serializeToString(xmlDoc));
+ await updateProfileHyperlinkTargets(zip,d);
+ return zip.generateAsync({type:'blob',mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document',compression:'DEFLATE',compressionOptions:{level:6}});
+}
+function slug(s){return String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'resume-target'}
+function downloadBlob(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)}
+async function exportWord(which){
+ try{const blob=await buildExportBlob(which),d=which==='master'?master:target;downloadBlob(blob,`CV-${which==='master'?'Master':slug(d.meta.role||'Resume-Target')}.docx`);toast('File Word berhasil diekspor.')}
+ catch(e){console.error(e);toast(e.message||'Ekspor Word gagal.')}
+}
+async function exportPDF(which){
+ const d=which==='master'?master:target;
+ if(!d){toast(which==='master'?'CV Master belum diimpor.':'Buat Resume Target terlebih dahulu.');return}
+ try{
+  // A browser-side DOCX renderer does not use the Microsoft Word layout engine.
+  // Download the exact edited DOCX and ask Word to create the PDF to preserve fidelity.
+  const blob=await buildExportBlob(which);
+  const base=which==='master'?'Master':slug(d.meta.role||'Resume-Target');
+  downloadBlob(blob,`CV-${base}-UNTUK-PDF.docx`);
+  const instructions=document.createElement('div');
+  instructions.innerHTML='<ol style="padding-left:21px;font-size:12px;line-height:1.7;color:#39465d"><li>Buka file <b>CV-'+escapeHTML(base)+'-UNTUK-PDF.docx</b> yang baru diunduh menggunakan Microsoft Word.</li><li>Pilih <b>File → Export → Create PDF/XPS</b> atau <b>File → Save As</b>.</li><li>Pilih format <b>PDF (*.pdf)</b>, lalu klik <b>Publish</b> atau <b>Save</b>.</li></ol><p style="font-size:11px;color:#6d788d;margin-top:10px">Cara ini memakai mesin layout Microsoft Word sehingga format, margin, font, dan pagination jauh lebih konsisten dibandingkan mencetak hasil render HTML di browser.</p>';
+  modal('Langkah terakhir: simpan sebagai PDF','File DOCX hasil resume sudah diunduh. Agar PDF mengikuti versi Word, konversikan file tersebut langsung melalui Microsoft Word.',()=>{},'Mengerti',instructions);
+ }catch(e){console.error(e);toast(e.message||'Gagal menyiapkan dokumen untuk konversi PDF.')}
+}
+async function loadFile(file){
+ if(!file)return;const err=$('uploadError');err.style.display='none';
+ if(!/\.docx$/i.test(file.name)){err.textContent='Browser hanya membaca .docx. Buka file .doc di Word lalu pilih Save As > Word Document (.docx).';err.style.display='block';return}
+ if(!window.mammoth||!window.JSZip){err.textContent='Library Word belum termuat. Pastikan koneksi internet aktif lalu muat ulang halaman.';err.style.display='block';return}
+ $('dropzone').classList.add('loading');
+ try{
+  const buffer=await file.arrayBuffer(),result=await mammoth.convertToHtml({arrayBuffer:buffer}),dom=document.createElement('div');dom.innerHTML=result.value;
+  const blocks=Array.from(dom.querySelectorAll('p,li,h1,h2,h3,h4,h5,h6')).filter(el=>!(el.tagName==='P'&&el.closest('li'))).map(el=>(el.tagName==='LI'?'• ':'')+el.textContent.replace(/\s+/g,' ').trim()).filter(Boolean);
+  const parsed=parseDocText(blocks.join('\n'));sensitiveProfileUnlocked=false;masterTemplateBuffer=buffer.slice(0);templateCatalog=await buildTemplateCatalog(masterTemplateBuffer,parsed);parsed.sections.forEach(s=>s._templateKey=norm(s.title));parsed.meta={role:'',company:'',jobDescription:''};master=parsed;masterBaseline=clone(master);target=null;current='master';saved={master:false,target:false};analysis={master:null,target:null};render();toast('CV Master berhasil diimpor. File Word asli tersedia untuk ekspor.');
+ }catch(e){console.error(e);err.textContent=e.message||'Gagal membaca file Word.';err.style.display='block'}finally{$('dropzone').classList.remove('loading')}
+}
+function resetSession(){
+ if(!master&&!target){toast('Sesi sudah kosong.');return}
+ confirmModal('Hapus seluruh sesi?','CV Master, Resume Target, dan seluruh perubahan di memori halaman akan dibersihkan. Ekspor hasil terlebih dahulu.',()=>{master=null;target=null;masterTemplateBuffer=null;templateCatalog=null;masterBaseline=null;sensitiveProfileUnlocked=false;current='master';saved={master:false,target:false};analysis={master:null,target:null};$('fileInput').value='';$('sectionsEditor').innerHTML='';$('sectionNav').innerHTML='';$('profileEditor').innerHTML='';$('paper').innerHTML='';$('welcome').classList.remove('hidden');$('workspace').classList.add('hidden');toast('Sesi telah dihapus.')});
+}
+$('chooseFile').onclick=()=>$('fileInput').click();$('fileInput').onchange=e=>loadFile(e.target.files[0]);
+$('dropzone').addEventListener('dragover',e=>{e.preventDefault();$('dropzone').classList.add('drag')});$('dropzone').addEventListener('dragleave',()=>$('dropzone').classList.remove('drag'));$('dropzone').addEventListener('drop',e=>{e.preventDefault();$('dropzone').classList.remove('drag');loadFile(e.dataTransfer.files[0])});
+$('toggleSensitiveProfile').onclick=()=>{sensitiveProfileUnlocked=!sensitiveProfileUnlocked;if(data())renderProfile(data());toast(sensitiveProfileUnlocked?'Profil sensitif dibuka untuk diedit.':'Profil sensitif dikunci kembali.')};
+$('tabMaster').onclick=()=>switchDoc('master');$('tabTarget').onclick=()=>switchDoc('target');$('btnNewTarget').onclick=newTarget;$('btnAddSection').onclick=addSection;$('addSectionSide').onclick=()=>{ $('newSectionType').value='entries';addSection()};$('btnSave').onclick=save;$('btnAnalyze').onclick=()=>{if(!target)return;target.meta.role=$('roleInput').value;target.meta.company=$('companyInput').value;target.meta.jobDescription=$('jdInput').value;target.profile.headline=target.meta.role;analyze()};
+$('roleInput').oninput=()=>{if(target){target.meta.role=$('roleInput').value;target.profile.headline=$('roleInput').value;saved.target=false;renderProfile(target);renderPreview(target)}};
+$('companyInput').oninput=()=>{if(target){target.meta.company=$('companyInput').value;saved.target=false}};$('jdInput').oninput=()=>{if(target){target.meta.jobDescription=$('jdInput').value;saved.target=false}};$('btnReset').onclick=resetSession;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const expbar=document.createElement('div');expbar.className='toolbar-btns';expbar.style.margin='0 0 13px';expbar.innerHTML='<button class="btn btn-light btn-sm" id="wordMaster">↓ Word Master</button><button class="btn btn-light btn-sm" id="pdfMaster">↓ PDF Master via Word</button><button class="btn btn-primary btn-sm" id="wordTarget">↓ Word Resume</button><button class="btn btn-primary btn-sm" id="pdfTarget">↓ PDF Resume via Word</button>';
+const observer=new MutationObserver(()=>{if(!$('workspace').classList.contains('hidden')&&!expbar.isConnected){$('sectionsEditor').before(expbar);$('wordMaster').onclick=()=>exportWord('master');$('pdfMaster').onclick=()=>exportPDF('master');$('wordTarget').onclick=()=>exportWord('target');$('pdfTarget').onclick=()=>exportPDF('target')}});
+observer.observe($('workspace'),{attributes:true,attributeFilter:['class']});
+})();
+</script>
+</body>
+</html>
